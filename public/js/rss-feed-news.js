@@ -36,7 +36,7 @@ async function getRss() {
   setTimeout(function(){ 
     document.querySelector('#news-loader').style.display = "none";
     document.querySelector('#latest-news').innerHTML = html;
-  }, 100);
+  }, 3000);
 }
 
 getRss();
