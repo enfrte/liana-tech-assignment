@@ -1,5 +1,3 @@
-console.log('hello');
-
 // fetch rss data - output in news section
 rssUrl = '../backend/rss-feed-news.php';
 
@@ -12,7 +10,7 @@ async function getRss() {
     console.log(e);
   }
 
-  console.log(json);
+  //console.log(json);
   //return JSON.stringify(json);
 
   let html = '';
