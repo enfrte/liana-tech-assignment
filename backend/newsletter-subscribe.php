@@ -2,7 +2,11 @@
 
 require '../backend/db/db-connect.php';
 
-$email = $_POST['email'];
+$email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+
+if ( !$email ) {
+  die('Error: Failed to validate email');
+}
 
 try {
     $sql = "INSERT INTO email_subscriber (email) VALUES (:email)";
